@@ -149,6 +149,7 @@
   "auth": {
     "welcome": "Welcome back",
     "tenantSlug": "School ID",
+    "nationalCode": "National ID",
     "password": "Password",
     "signIn": "Sign in",
     "signingIn": "Signing in…",

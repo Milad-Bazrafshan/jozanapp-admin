@@ -11,8 +11,8 @@ export function LoginPage() {
   const auth = useAuth()
   const navigate = useNavigate()
   const [form, setForm] = useState({
-    tenantSlug: import.meta.env.DEV ? 'demo-school' : '',
-    email: import.meta.env.DEV ? 'admin@example.com' : '',
+    tenantSlug: 'jozan',
+    email: import.meta.env.DEV ? '0099999991' : '',
     password: '',
   })
   const [error, setError] = useState('')
@@ -63,7 +63,7 @@ export function LoginPage() {
             </div>
           </div>
           <Field label={t('auth.tenantSlug')} value={form.tenantSlug} onChange={(tenantSlug) => setForm({ ...form, tenantSlug })} autoComplete="organization" className="ltr-field" />
-          <Field label={t('common.email')} type="email" value={form.email} onChange={(email) => setForm({ ...form, email })} autoComplete="username" />
+          <Field label={t('auth.nationalCode')} type="text" inputMode="numeric" value={form.email} onChange={(email) => setForm({ ...form, email })} autoComplete="username" className="ltr-field" />
           <Field label={t('auth.password')} type="password" value={form.password} onChange={(password) => setForm({ ...form, password })} autoComplete="current-password" />
           {error ? <p className="text-sm text-rose-600">{error}</p> : null}
           <Button type="submit" className="w-full" disabled={busy}>
